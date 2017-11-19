@@ -1,0 +1,34 @@
+﻿@model QuizApplicationMVC5.viewModels.QuizVM
+
+@{
+    ViewBag.Title = "SelectQuizz";
+}
+
+<div class="container">
+
+    <div class="userConnected" style="border:2px dashed #cecaca; border-radius: 10px; margin-top: 3%;">
+
+        @{ Html.RenderPartial("_UserInfo");}
+
+    </div>
+
+
+    <div class="SelQuiz">
+
+        <div class="panel panel-default" style="width: 37%; margin: 20% 32%;">
+            <div class="panel-heading">Select Your Quiz  ^_^</div>
+            <div class="panel-body">
+
+                @using (Html.BeginForm("SelectQuizz", "Quizz", FormMethod.Post))
+                {
+                    @Html.DropDownListFor(model => model.QuizID, Model.ListOfQuizz, new { @class = "form-control", @style = "margin-left:51px;" } )<br/>
+                    <button type="submit" id="Enter" class="btn btn-success btn-lg" style="width:100%;"><span class="glyphicon glyphicon-ok"></span>   Let's GO </button>
+                }
+
+            </div>
+        </div>
+
+    </div>
+
+</div>  <!-- END CONTAINER -->
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b232edad6efe46f79b158a5adf3057fc" Name="Diagram1">
+        <EntityTypeShape EntityType="DBQuizModel.Answer" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" FillColor="Brown" />
+        <EntityTypeShape EntityType="DBQuizModel.Choice" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" FillColor="255, 128, 255" />
+        <EntityTypeShape EntityType="DBQuizModel.Question" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQuizModel.Quiz" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" FillColor="255, 255, 128" />
+        <EntityTypeShape EntityType="DBQuizModel.User" Width="1.5" PointX="1" PointY="4.875" IsExpanded="true" FillColor="Olive" />
+        <AssociationConnector Association="DBQuizModel.FK_Answers_Questions" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQuizModel.FK_Choices_Questions" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQuizModel.FK_Questions_Quiz" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

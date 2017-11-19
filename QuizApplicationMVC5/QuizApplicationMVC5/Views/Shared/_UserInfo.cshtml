@@ -1,0 +1,40 @@
+﻿@using QuizApplicationMVC5.viewModels
+@{
+    UserVM userConnected = Session["UserConnected"] as UserVM;
+    QuizVM quizSelected = Session["SelectedQuiz"] as QuizVM;
+
+}
+
+
+    @if (userConnected != null)
+    {
+        <div class="row">
+
+            <div class="col-md-4">
+                <img src="@string.Format("{0}{1}", Url.Content("~/images/"), userConnected.ProfilImage)" class="img-circle" style="width: 12%;" />
+                <span> <b>Welcome :</b> @userConnected.FullName</span>
+            </div>
+
+            <div class="col-md-4" style="margin-top: 15px;">
+
+                @if ( quizSelected != null && !string.IsNullOrEmpty(quizSelected.QuizName))
+                {
+                    <span> <b>Quiz Selected :</b> @quizSelected.QuizName</span>
+                }
+                else
+                {
+                    <span> <b>Please Select your Quiz </b></span>
+                }
+
+            </div>
+
+            <div class="col-md-4" style="margin-top: 15px;">
+                <span> <b>Date :</b> @DateTime.Now</span>
+            </div>
+
+        </div>
+    }
+
+   
+
+
